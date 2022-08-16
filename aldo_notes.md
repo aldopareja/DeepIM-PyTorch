@@ -22,3 +22,21 @@ sudo /home/aldo/miniconda3/envs/deepIM/bin/python setup.py develop
 pip install pyyaml==5.4.1
 ./experiments/scripts/demo_rgbd.sh
 ```
+
+# vncserver 
+
+I used [this page](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04) to setup the server.
+
+initialize the server in the host:
+
+```
+vncserver
+```
+
+To connect just forward the port on the local machine
+
+```
+ssh -N -f -L localhost:59001:localhost:5901 aldo@bayesian-01
+```
+
+then on osx, go to finder `cmd + k` and use `vnc://localhost:59001`
